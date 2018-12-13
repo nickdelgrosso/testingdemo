@@ -1,17 +1,12 @@
 
 
+complements = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'T'}
+
 def reverse_complement(seq):
     seq = seq.upper()
     rseq = []
     for nt in seq:
-        if nt == 'G':
-            rseq.append('C')
-        elif nt == 'C':
-            rseq.append('G')
-        elif nt == 'T':
-            rseq.append('A')
-        elif nt == 'A':
-            rseq.append('T')
+        rseq.append(complements[nt])
     return ''.join(rseq)[::-1]
 
 
